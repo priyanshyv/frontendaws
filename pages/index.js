@@ -4,7 +4,7 @@ export default function Home() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('http://3.110.187.174:6000/hello')
+    fetch('/api/hello')
       .then(res => res.json())
       .then(data => setMessage(data.message))
       .catch(console.error);
